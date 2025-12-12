@@ -61,6 +61,7 @@ HUMAN-LIKE-DECISION-MODELING
 │   └── evaluate_model.py    # 3. NLL Evaluation script
 ├── requirements.txt
 └── README.md
+```
 
 ## Future Work
 * **SFT + DPO**: Apply DPO on top of a Supervised Fine-Tuned (SFT) model to reduce initial reasoning noise.
