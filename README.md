@@ -15,7 +15,7 @@ To bridge the gap between large-scale cognitive models (e.g., Centaur, 70B) and 
 
 ### Models & Approaches
 * **Baselines:**
-    * **M1 (Symbolic SFT):** Standard fine-tuning on key labels (A/B/C).
+    * **M1 (Symbolic SFT):** Standard fine-tuning on key labels (A/B/C), used as a conceptual baseline rather than a direct evaluation baseline.
     * **M3 (Semantic Analysis):** Using Sentence-BERT embeddings to predict choices based on semantic distance margins.
 * **Proposed Solution:**
     * **M5 (Key-Only DPO):** A novel approach where the model generates reasoning traces during training to form preference pairs (Chosen vs. Rejected), but is optimized to output only the final decision key. This "internalizes" the reasoning benefit without breaking NLL evaluation compatibility.
@@ -36,7 +36,7 @@ The Key-Only DPO model demonstrated measurable alignment improvements over the b
 ## Key Insights
 * **Semantic Margins Matter:** SBERT similarity is a strong predictor of human choices in "high-margin" (easy) trials but struggles with nuanced decisions.
 * **Indirect Reasoning:** DPO effectively serves as a mechanism to incorporate reasoning benefits into a model that must output simple keys at inference time.
-* **Resource Efficiency:** Meaningful cognitive alignment is possible on consumer-grade hardware (e.g., Colab T4/A100) using 2B parameter models.
+* **Resource Efficiency:** Meaningful cognitive alignment is possible on modest hardware (e.g., Colab T4, A100-class GPUs) using 2B parameter models.
 
 ## Tech Stack
 * **Core:** Python, PyTorch
