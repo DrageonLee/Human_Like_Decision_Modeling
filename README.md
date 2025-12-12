@@ -48,18 +48,14 @@ The Key-Only DPO model demonstrated measurable alignment improvements over the b
 ```text
 HUMAN-LIKE-DECISION-MODELING
 ├── data
-│   ├── raw                  # Original Psych-101 data
-│   └── processed            # Generated reasoning & Judged DPO pairs
-├── models
-│   └── dpo_model_final      # Saved LoRA adapters
+│   └── judged_traces        # Generated reasoning & Judged DPO pairs
 ├── notebooks
-│   └── 01_analysis_sbert.ipynb  # SBERT embedding & Margin analysis
+│   └── analysis.ipynb       # SBERT embedding & Margin analysis
 ├── src
 │   ├── utils.py             # Shared utility functions (prompting, parsing)
 │   ├── generate_reasoning.py # 1. Inference script for reasoning traces
 │   ├── train_dpo.py         # 2. Training script for Key-Only DPO
 │   └── evaluate_model.py    # 3. NLL Evaluation script
-├── requirements.txt
 └── README.md
 ```
 
